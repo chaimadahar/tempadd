@@ -1,0 +1,323 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+body{
+    width:100%;
+    height: 100%;
+    background: #e5e7eb;
+    position: relative;
+}
+#menu{
+   background: #111827;
+   width:300px;
+   height:657px; 
+   position: fixed;
+   left:0;
+}
+#menu .logo{
+ display: flex;
+ align-items: center;
+ color:#fff;
+ padding:30px 0 0 30px;
+}
+#menu .logo img{
+    max-width: 50px;
+    max-height:50px;
+    border-radius:50% ;
+    margin-right:15px;
+}
+#menu .items ul{
+    list-style:none;
+    padding:15px 0;
+}
+#menu .items ul li{
+   margin:10px 10px;
+   padding: 10px 10px;
+   transition:0.3s ease;
+}
+#menu .items ul li a{
+    text-decoration: none;
+    font-size:15px ;
+    font-weight:300px;
+    color:rgb(134,141,151);
+    transition:0.3s ease;
+}
+#menu .items ul li:nth-child(1){
+    border-left:4px solid #fff;
+}
+#menu .items ul li:hover{
+    background: #253047;
+    cursor:pointer;
+   
+
+}
+#menu .items ul li:hover i,
+#menu .items ul li:hover a{
+  color:#f3d4d6;
+  margin-right: 10px;
+
+}
+#menu .items ul li i{
+    color:rgb(134,141,151);
+    width:30px;
+    height: 20px;
+    line-height: 30px;
+    text-align:center;
+    font-size: 14px;
+    margin:0 10px 0 25px;
+}
+#interface{
+   width:1066px;
+   position: fixed;
+   left:300px;
+   z-index: 1;
+
+}
+#interface .navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding:15px 30px;
+    border-bottom:3px solid #594ef7;
+
+}
+#interface .navigation .profile img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+
+}
+#interface .n1{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+#interface .n1 div #menu-btn{
+ color:#2b2b2b;
+ font-size: 20px;
+ cursor: pointer;
+}
+#interface .navigation .search{
+    padding: 10px 14px;
+    position:relative;
+}
+#interface .navigation .search input{
+    width: 259px;
+    height: 40px; 
+    padding-left:15px;
+    font-size:15px;
+}
+#interface .navigation .search input::placeholder{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: rgb(134,141,151);
+    font-size:16px;
+
+}
+#interface .navigation .search i{
+    position: absolute;
+    bottom: 19.5px;
+    right: 23px; 
+    color: #594ef7;
+}
+#interface .navigation .profile{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+#interface .navigation .profile i{
+   margin-right: 10px;
+   font-size: 19px;
+   font-weight:400;
+   color:#594ef7;
+}
+#interface .navigation .profile .dropdown{
+    position: absolute;
+    background-color: #fff;
+    border-bottom: 2px solid #594ef7;
+    padding: 10px 10px;
+    bottom: -75px;
+    left: -87px;
+    width:150px;
+    display: none;
+
+}
+#interface .navigation .profile .dropdown::before{
+    content:'';
+    border-width: 9px;
+    border-style: solid;
+    border-color:transparent transparent white transparent; 
+    position: absolute;
+    top: -18px;
+    right: 1px;
+}
+
+
+#interface .navigation .profile .dropdown ul{
+    list-style: none;
+}
+#interface .navigation .profile .dropdown ul li{
+   margin-left: 5px;
+}
+#interface .navigation .profile .dropdown ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(134,141,151);
+    padding: 5px 5px;
+}
+#interface .navigation .profile .dropdown ul li:hover a,#interface .navigation .profile .dropdown ul li:hover i{
+    cursor:pointer;
+    color:#111827;
+    font-weight: bold;
+}
+#interface .navigation .profile .dropdown ul li:hover {
+    padding-left:10px;
+    transition: 0.3s ease;
+}
+#dashboard{
+   position: absolute;
+   left:300px;
+   top:93px;
+ 
+}
+#dashboard .i-name{
+    color:#444a53;
+    padding:30px 30px 0 30px ;
+    font-size:24px;
+    font-weight: 700;
+}
+#dashboard .values{
+    padding:30px 30px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+#dashboard .values .val-box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: #fff;
+    width: 235px;
+    padding:16px 20px;
+    border-radius: 5px;
+    margin-left:10px;
+}
+#dashboard .values .val-box i{
+    font-size: 25px;
+    width:60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    color:#fff;
+    background: #7874ec;
+    margin-right:15px;
+}
+#dashboard .values .val-box:nth-child(2) i{
+    background: #5c8af0;
+}
+#dashboard .values .val-box:nth-child(3) i{
+    background: #e45d99;
+}
+#dashboard .values .val-box:nth-child(4) i{
+    background: #74daec;  
+}
+#dashboard .values .val-box h3{
+    font-size:18px;
+    font-weight: 600;
+}
+#dashboard .values .val-box span{
+    font-size:15px;
+    color:#828997;
+}
+.board{
+    width:94%;
+    margin:30px 0 30px 30px;
+    overflow:auto;
+    background:#fff;
+    border-radius:8px;
+}
+.board img{
+   width:50px;
+   height: 50px;
+   border-radius: 50%;
+   object-fit: cover; 
+   margin-right: 15px;
+}
+.board h5{
+    font-weight: 600;
+    font-size: 14px;
+}
+.board p{
+    font-weight: 400;
+    font-size: 13px;
+    color: #787d8d;
+}
+.board .people{
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   text-align: start;
+}
+table{
+    border-collapse: collapse;
+}
+tr{
+    border-bottom: 1px solid #eef0f3;
+}
+thead{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    background: #f9fafb;
+    text-align: start;
+    padding:30px ;
+}
+tbody tr td{
+padding:10px 15px;
+}
+.active p{
+    background: #d7fada;
+    padding:2px 10px;
+    display: inline-block;
+    border-radius: 40px;
+    color:#2b2b2b;
+}
+.edit a{
+    text-decoration: none;
+    font-size:14px;
+    color:#554cd1;
+    font-weight: 600;
+
+}
+@media(max-width:769px){
+    #menu{
+        width:105px;
+        height: 656px;
+    } 
+    #menu .logo h2{
+        display: none;
+    }
+    #interface{
+        width:664px;
+        position: fixed;
+        left:105px;
+    } 
+    #dashboard{
+        width:664px; 
+        position: absolute;
+        left:105px; 
+    } 
+
+}
